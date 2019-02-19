@@ -48,10 +48,6 @@ def move(my_history, their_history, my_score, their_score):
     X = X[:,np.newaxis]
         
     if (len(my_history) > 0):
-        '''y = y.reshape((len(my_history)/3), 3)
-        X = X.reshape(3,(len(my_history)/3))
-        print y
-        print X'''
 
         # seed random numbers to make calculation
         # deterministic (just a good practice)
@@ -75,9 +71,6 @@ def move(my_history, their_history, my_score, their_score):
             # update weights
             syn0 += np.dot(np.squeeze(np.asarray(l0.T)), np.squeeze(np.asarray(l1_delta)))
             
-        print my_history
-        print their_history
-        print l1
         
         #thinks we should betray
         if (l1 > 0.5):
